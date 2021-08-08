@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --light-pale-blue: hsla(229, 74%, 95%, 0.61);
+}
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Red Hat Display',sans-serif;
+}
+
+#main{
+    height: 100vh;
+    background: url("./images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pale-blue);
+    ;
+}
+
+#card{
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 6px -6px black;
+}
+
+#img-div{
+    display: flex;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+#music{
+    max-width:100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#container{
+    display: flex;
+    background-color: var(--very-pale-blue);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+#text-part{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    letter-spacing: 0.1px;
+}
+
+#text-part h1{
+    font-size: 25px;
+    font-weight: 900;
+    color:var(--dark-blue);
+    padding-bottom: 15px;
+}
+
+#text-part p{
+    font-size: 16px;
+    font-weight:500;
+    text-align:center;
+    opacity: 0.6;
+}
+
+#annualPlan{
+    width: 100%;
+    display: flex;
+    background-color:var(--light-pale-blue);
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#price{
+    width: 100%;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 6%;
+}
+
+#price h4{
+    width: auto;
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+
+#price p{
+    opacity: 0.6;
+}
+
+#change{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#change a{
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--bright-blue);
+}
+
+#buttons{
+    margin-top:40px;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button{
+    height: 40px;
+    width:100%;
+    border:none;
+    font-size:14px;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.2px;
+}
+
+#button1{
+    background-color: var(--bright-blue);
+    color: var(--very-pale-blue);
+    border-radius: 10px;
+}
+
+#button2{
+    opacity: 0.6;
+}
+
+#button1:hover,#change a:hover{
+    opacity: 0.6;
+}
+
+#change a:hover{
+    text-decoration: none;
+}
+
+#button2:hover{
+    opacity: 1;
+    color:var(--dark-blue);
+}
+
+@media (max-width: 800px){
+    #main{
+        background:url("./images/pattern-background-mobile.svg");
+        background-repeat: no-repeat;
+        background-color: var(--pale-blue);
+        height: 110vh;
+    }
+
+    #card{
+        width: 90%;
+    }
+
+    #block{
+        padding:6%;
+    }
+
+    #text-part h1{
+        text-align: center;
+    }
+
+    #text-part p{
+        font-size: 14px;
+        line-height: 1.3rem;
+        text-align: center;
+    }
+}
